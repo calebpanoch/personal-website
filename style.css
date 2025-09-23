@@ -1,0 +1,74 @@
+/* Minimal CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background: #f9f9f9;
+  color: #222;
+}
+
+.main {
+  background: linear-gradient(
+    to right, 
+    #e3dcca 40%,   /* left side blue */
+    #FFF 40%    /* right side red */
+  );
+  height: 80vh;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+}
+
+.box {
+  background: linear-gradient(
+    to right, 
+    #dbd4c1 40%,   /* left side blue */
+    #FFF 40%    /* right side red */
+  );
+  height: 60vh;
+  width: 50vw;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.navbar {
+  background-color: #FFF;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
+}
+
+.navbar a {
+  font-family: 'Bebas Neue', system-ui, sans-serif;
+  font-size: clamp(10px, 1.25vw, 48px);
+  padding: 10px;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #AFF;
+}
+
+.navbar a:last-child {
+  margin-right: 2vw; /* space to the right of the last link */
+}
+
+
+.navbar p {
+  font-family: 'Bebas Neue', system-ui, sans-serif;
+  font-size: clamp(16px, 2vw, 48px);
+  margin-left: 2vw;
+}
+
+.spacer  {
+  flex-grow: 1;
+}
