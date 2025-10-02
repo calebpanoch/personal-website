@@ -33,6 +33,11 @@ import "vue3-typer/dist/vue-typer.css"
         where I can contribute my skills and grow as a software engineer.
       </p>
       <a v-motion-roll-visible-once-left class="button-link-2" href="CalebPanochResume.pdf">Download CV</a>
+      <div class="links-container">
+        <a href="https://github.com/calebpanoch"><img style="height: 60px;" src="../public/github-mark.png"></a>
+        
+        <a href="https://www.linkedin.com/in/calebpanoch/"><img style="height: 60px;" src="../public/linkedin-mark.png"></a>
+      </div>
     </div>
 
   </div>

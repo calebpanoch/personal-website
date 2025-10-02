@@ -75,9 +75,9 @@ html, body {
     line-height: 1.4px;
 }
 .box-container .box .title {
+    line-height: 1;
     font-size: 30px;
     padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 20px;
 }
 .box-container .box .major {
@@ -143,6 +143,14 @@ html, body {
 .button-link-2:hover {
   background: #af88ef;
   border: 5px solid #af88ef;
+}
+.bio .links-container {
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+}
+.bio img:hover {
+    filter: grayscale(100%) sepia(100%) hue-rotate(200deg) saturate(500%) brightness(90%);
 }
 
 .navbar {
