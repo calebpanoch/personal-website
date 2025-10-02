@@ -1,203 +1,79 @@
-<script setup></script>
+<script setup>
+import VueTyper from 'vue3-typer'
+import "vue3-typer/dist/vue-typer.css"
+</script>
 
 <template>
-  <div class="navbar">
+  <div v-motion-slide-top class="navbar">
     <p class="full-name">&lt;/&gt; Caleb Panoch | Software Engineer</p>
     <div class="navlinks">
-      <a>Education</a>
-      <a>Experience</a>
+      <a class="button">Education</a>
+      <a class="button">Experience</a>
       <a class="button-link" href="CalebPanochResume.pdf">Resume</a>
     </div>
   </div>
   <div class="main">
-    <div class="bio">
-      <p class="intro">Hi, my name is</p>
-      <p class="name">Caleb Panoch</p>
-      <p class="dynamic-bio">I love to code</p>
-      <p class="description">
-        placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder
-        placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text 
-        placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text 
+    <div v-motion-slide-visible-once-top class="bio">
+      <p v-motion-roll-visible-once-left class="intro">Hi, my name is</p>
+      <p v-motion-roll-visible-once-right class="name">Caleb Panoch</p>
+      
+      <p v-motion-roll-visible-once-left class="dynamic-bio">
+        <VueTyper 
+          :text="['I\'m a lifelong learner in tech. ', 'I thrive on solving puzzles. ', 'I love to fish! ']"
+          eraseStyle="backspace"
+          erase-delay='50'
+          style="color: #fff;"
+          preEraseDelay="4000"
+        />
       </p>
-      <a class="button-link-2" href="CalebPanochResume.pdf">Download CV</a>
+      <p v-motion-roll-visible-once-right class="description">
+        I'm a recent M.S. graduate in Computer Science from Florida Atlantic University 
+        with nearly a decade of coding experience. I'm passionate about building efficient software, 
+        solving real-world problems, and alway learning new technologies. I'm now seeking opportunities 
+        where I can contribute my skills and grow as a software engineer.
+      </p>
+      <a v-motion-roll-visible-once-left class="button-link-2" href="CalebPanochResume.pdf">Download CV</a>
     </div>
 
   </div>
+  <div class="education">
+    <p v-motion-slide-visible-once-bottom id="label">Education</p>
+    <div class="box-container">
+      <div v-motion-slide-visible-once-left class="box">
+        <p class="title">Florida Atlantic University</p>
+        <p class="major">Bachelor of Science in Computer Science</p>
+        <p class="date">August 2020 - December 2023</p>
+        <p class="gpa">GPA: 3.95</p>
+      </div>
+      <div v-motion-slide-visible-once-right class="box">
+        <p class="title">Florida Atlantic University</p>
+        <p class="major">Masters of Science in Computer Science</p>
+        <p class="date">January 2024 - December 2024</p>
+        <p class="gpa">GPA: 3.9</p>
+      </div>
+    </div>      
+  </div>
+
   <div class="experience">
-    test test test
+    <p v-motion-slide-visible-once-bottom id="label">Experience</p>
+    <div class="box-container">
+      <div v-motion-slide-visible-once-left class="box">
+        <p class="title">Technical Support Specialist</p>
+        <p class="major">Gary Panoch Funeral Home & Cremations</p>
+        <p class="date">August 2018 - Present</p>
+      </div>
+      <div v-motion-slide-visible-once-bottom class="box">
+        <p class="title">Teaching Assistant</p>
+        <p class="major">Florida Atlantic University</p>
+        <p class="date">January 2024 - May 2024</p>
+      </div>
+      <div v-motion-slide-visible-once-right class="box">
+        <p class="title">Machine Learning Internship</p>
+        <p class="major">Florida Atlantic University</p>
+        <p class="date">May 2023 - August 2023</p>
+      </div>
+    </div>      
   </div>
 </template>
 
-<style>
-* {
-  box-sizing: border-box;
-}
-
-
-html, body {
-  font-family: georgia, sans-serif;
-  color: #FFF;
-  background: #1f1b34;
-  margin: 0px;
-  height: 100%;
-}
-
-.main {
-  width: 100%;
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.experience {
-  background: #2f294f;
-  min-height: 50vh;
-}
-
-.bio {
-  height: 100%;
-  width: 40%;
-  margin-top: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-.bio p {
-  margin: 0;
-  padding: 5px;
-}
-.bio .intro{
-  color: #af88ef;
-  font-size: 20px;
-}
-.bio .name {
-  opacity: .85;
-  font-size: 100px;
-}
-.bio .dynamic-bio {
-  opacity: .5;
-  font-size: 60px;
-}
-.bio .description {
-  text-align: center;
-  opacity: .5;
-  font-size: 20px;
-  line-height: 1.5;
-  padding: 20px;
-}
-.button-link-2 {
-  font-size: 20px;
-  padding: 15px;
-  border: 5px solid #50055c;
-  color: #fff;
-  width: 200px;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.button-link-2:hover {
-  background: #af88ef;
-  border: 5px solid #af88ef;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 7%;
-  z-index: 9999;
-  background: #1f1b34;
-
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 20px;
-}
-.navlinks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 40px;
-  padding-right: 150px;
-}
-.navlinks a {
-  cursor: pointer;
-  font-size: 20px;
-}
-.button-link {
-  padding: 5px 10px;
-  border: 5px solid #50055c;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.button-link:hover {
-  background: #af88ef;
-  border: 5px solid #af88ef;
-}
-
-.navbar .full-name {
-  color: #af88ef;
-  font-family: georgia, sans-serif;
-  margin-right: auto;
-  padding-left: 40px;
-  font-size: 30px;
-}
-
-@media (max-width: 1100px) {
-  .navlinks {
-    padding-right: 50px;
-    gap: 20px;
-  }
-
-  .navlinks a {
-    font-size: 10px;
-  }
-
-  .navbar .full-name {
-    font-size: 20px;
-    white-space: nowrap;
-    padding-left: 20px;
-  }
-
-  .button-link {
-    border: 2px solid #50055c;
-  }
-  .button-link:hover {
-    background: #af88ef;
-    border: 2px solid #af88ef;
-  }
-}
-
-@media (max-width: 600px) {
-  .navlinks {
-    padding-right: 25px;
-    gap: 10px;
-  }
-
-  .navlinks a {
-    font-size: 5px;
-  }
-
-  .navbar .full-name {
-    font-size: 11px;
-    white-space: nowrap;
-  }
-
-  .button-link {
-    border: 1px solid #50055c;
-  }
-  .button-link:hover {
-    background: #af88ef;
-    border: 1px solid #af88ef;
-  }
-}
-</style>
+<style></style>
