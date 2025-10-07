@@ -1,6 +1,9 @@
 <script setup>
 import VueTyper from 'vue3-typer'
 import "vue3-typer/dist/vue-typer.css"
+const languages = ["Python", "C/C++", "JavaScript", "SQL", "LUA"]
+const fwstls = ["TensorFlow", "NumPy", "GCP", "Git", "Back4App", "HTML5", "CSS", "React", "Node.js"]
+const concepts = ["Machine Learning", "AI-driven Systems", "Scalable Web Development", "Cloud Deployment", "Data Analysis", "Automation"]
 
 function scrollTo(id) {
   const el = document.getElementById(id)
@@ -93,31 +96,84 @@ function scrollTo(id) {
 
   <div class="education" id="skills">
     <p v-motion-slide-visible-once-bottom id="label">Skills</p>
-    <div class="box-container">
+    <div>
       <p class="category">Languages</p>
-      <div v-motion-slide-visible-once-right class="box">
-        <p class="title">HTML</p>
+      <div class="box-row">
+        <div
+          v-for="(language, index) in languages"
+          :key="index"
+          v-motion-slid-visible-once-left
+          class="box"
+          >
+          <p class="title">{{ language }}</p>
+        </div>
+      </div>
+
+      <p class="category">Frameworks/Tools</p>
+      <div class="box-row">
+        <div
+          v-for="(fwtl, index) in fwstls"
+          :key="index"
+          v-motion-slid-visible-once-left
+          class="box"
+          >
+          <p class="title">{{ fwtl }}</p>
+        </div>
+      </div>
+
+      <p class="category">Concepts</p>
+      <div class="box-row">
+        <div
+          v-for="(concept, index) in concepts"
+          :key="index"
+          v-motion-slid-visible-once-left
+          class="box"
+          >
+          <p class="title">{{ concept }}</p>
+        </div>
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+    </div> 
+  </div>
+  <div class="experience" id="projects">
+    <p v-motion-slide-visible-once-bottom id="label">Projects</p>
+    <div class="box-container">
+      <div v-motion-slide-visible-once-left class="box">
+        <p class="title">Autonomous Receptionist Robot Dog</p>
+        <p class="major">Installed facial recognition python packages on a robot dog that can retrieve your appointment information from a
+database. Then the robot dog leads you to your appointment location</p>
+      </div>
+      <div v-motion-slide-visible-once-bottom class="box">
+        <p class="title">FAU Social Board</p>
+        <p class="major">
+          Developed a full-stack social web app enabling user registration, login, and post sharing using HTML, CSS, and JavaScript.
+          <br></br><br></br>
+          Implemented scalable frontend logic and optimized data flow to enhance user engagement and responsiveness.</p>
+        <p class="date"><a style="color: #af88ef" href="https://github.com/calebpanoch/cen4010_spr23_g20">GitHub</a></p>
       </div>
       <div v-motion-slide-visible-once-right class="box">
-        <p class="title">JavaScript</p>
-      </div>
-      <div v-motion-slide-visible-once-left width="auto" class="box">
-        <p class="title">CSS</p>
-      </div>
-      <div v-motion-slide-visible-once-right class="box">
-        <p class="title">C</p>
-      </div>
-      <div v-motion-slide-visible-once-right class="box">
-        <p class="title">C++</p>
+        <p class="title">JPG Image Sharing Website Using CI/CD</p>
+        <p class="major">
+          Built and deployed a cloud-based image sharing platform using Google Cloud services and CI/CD pipelines.
+          <br></br><br></br>
+          Utilized Google Cloud Storage for image management and Datastore for metadata persistence, with secure
+          authentication through Back4App.
+        </p>
       </div>
       <div v-motion-slide-visible-once-right class="box">
-        <p class="title">Python</p>
-      </div>
-      <div v-motion-slide-visible-once-right class="box">
-        <p class="title">Lua</p>
+        <p class="title">Multi-Party Computation Intersection</p>
+        <p class="major">
+          Developed a GUI application that uses cryptographic protocols to compare datasets across distributed instances without exposing private data.
+          <br></br><br></br>
+          Demonstrated secure computation principles in multi-user environments.
+        </p>
       </div>
     </div>      
   </div>
+
 </template>
 
 <style></style>
