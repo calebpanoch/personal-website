@@ -17,7 +17,7 @@ function scrollTo(id) {
       <a class="button" @click.prevent="scrollTo('education')">Education</a>
 
       <a class="button" @click.prevent="scrollTo('experience')">Experience</a>
-      <a class="button-link" href="CalebPanochResume.pdf">Resume</a>
+      <a class="button-link" href="../public/CalebPanochResume.pdf">Resume</a>
     </div>
   </div>
   <div class="main">
@@ -40,7 +40,7 @@ function scrollTo(id) {
         solving real-world problems, and alway learning new technologies. I'm now seeking opportunities 
         where I can contribute my skills and grow as a software engineer.
       </p>
-      <a v-motion-roll-visible-once-left class="button-link-2" href="CalebPanochResume.pdf">Download CV</a>
+      <a v-motion-roll-visible-once-left class="button-link-2" href="../public/CalebPanochResume.pdf">Download CV</a>
       <div class="links-container">
         <a href="https://github.com/calebpanoch"><img style="height: 60px;" src="../public/github-mark.png"></a>
         
