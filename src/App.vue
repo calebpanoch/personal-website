@@ -146,6 +146,12 @@ function scrollTo(id) {
         <p class="major">Installed facial recognition python packages on a robot dog that can retrieve your appointment information from a
 database. Then the robot dog leads you to your appointment location</p>
       </div>
+      <div v-motion-slide-visible-once-left class="box">
+        <p class="title">Fish Finder Website</p>
+        <p class="major">Built a full-stack fishing spot discovery app using React with an interactive map interface (Google Maps style plugin),
+backed by a Node.js/Express API, enabling users to upload, browse, and tag fishing locations.<br></br><br></br> Also implemented cloud-native architecture on Google Cloud Platform, including Cloud Storage buckets for image handling and GCP hosting for the frontend/backend, optimizing performance, scalability, and deployment workflows</p>
+        <p class="date"><a style="color: #af88ef" href="https://findfish.dev">FindFish.dev</a></p>
+      </div>
       <div v-motion-slide-visible-once-bottom class="box">
         <p class="title">FAU Social Board</p>
         <p class="major">
