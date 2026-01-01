@@ -74,9 +74,15 @@ function scrollTo(id) {
     <p v-motion-slide-visible-once-bottom id="label">Experience</p>
     <div class="box-container">
       <div v-motion-slide-visible-once-left class="box">
-        <p class="title">Technical Support Specialist</p>
+        <p class="title">Technology & Operations Support Specialist </p>
         <p class="major">Gary Panoch Funeral Home & Cremations</p>
-        <p class="date">August 2018 - Present</p>
+        <p class="date">December 2025 - Present</p>
+        <p class="description">Rebuilding and maintaining the company website using modern web tooling (e.g., Vite, React). Managing and optimizing Google Ads campaigns to improve visibility and lead generation. Monitoring performance metrics and preparing basic reports for management. Supporting general office operations while learning internal administrative processes</p>
+      </div>
+      <div v-motion-slide-visible-once-left class="box">
+        <p class="title">IT Support Technician</p>
+        <p class="major">Gary Panoch Funeral Home & Cremations</p>
+        <p class="date">August 2018 - December 2025</p>
         <p class="description">Provided technical support and information about computer and tablet devices. Also set up live streaming service for families at home during the pandemic.</p>
       </div>
       <div v-motion-slide-visible-once-bottom class="box">
